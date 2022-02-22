@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+	<title>Isaias</title>
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="hero" style="padding-bottom: 0 !important; min-height: fit-content;">
+			<h1>Previsão do Tempo</h1>
+			<p>
+				Previsão do tempo é apenas uma portal de avaliação diagnóstica de HTML e CSS para a disciplina de
+				Laboratório
+				de Desenvolvimento I ofertada no curso ADS do IFSP de Catanduva.
+				Este portal consulta as previsões do tempo integrando com o serviço da
+				<a href="http://servicos.cptec.inpe.br/XML/" target="_blank">CPTEC/INPE</a>
+			</p>
+		</div>
+
+		<!-- BEGIN FORM -->
+		<div class="hero">
+			<div class="container">
+
+				<form action="#" class="find-location">
+					<input type="text" #nomeCidade id="nomeCidade" placeholder="Digite o nome da cidade">
+					<button type="button" onclick="carregaList(nomeCidade)">Adicionar</button>
+					</input>
+
+					<br> <br>
+				</form>
+
+				<form action="#" class="find-location">
+
+					<select #selectCidades name="selectCidades" id="selectCidades">
+						<option value="">-- selecione uma cidade --</option>
+					</select>
+					<button type="button" id="btRequest" onclick="requestCidades(selectCidades)"> Pesquisar </button>
+				</form>
+			</div>
+		</div>
+		<!-- END FORM -->
+
+		<div id="forecast-container" class="forecast-container">
+
+		</div>
+
+		<div class="footer">
+			<p>Isaías M. Bueno - AL3006395</p>
+		</div>
+
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="main.js"></script>
+
+</body>
+
+</html>
