@@ -197,6 +197,18 @@ form textarea {
   background-color: #262936;
 }
 
+.footer button[type="button"] {
+  border: 0;
+  border-radius: 30px;
+  position: center;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 0 40px;
+  background-color: #262936;
+  color: #fff;
+}
+
 @media screen and (max-width: 990px) {
   .forecast-container .forecast {
     display: block;
