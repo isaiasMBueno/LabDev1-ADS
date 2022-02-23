@@ -15,13 +15,13 @@
 	<div class="container">
 		<div class="hero" style="padding-bottom: 0 !important; min-height: fit-content;">
 			<h1>Previsão do Tempo</h1>
-			<p>
-				Previsão do tempo é apenas uma portal de avaliação diagnóstica de HTML e CSS para a disciplina de
-				Laboratório
-				de Desenvolvimento I ofertada no curso ADS do IFSP de Catanduva.
-				Este portal consulta as previsões do tempo integrando com o serviço da
-				<a href="http://servicos.cptec.inpe.br/XML/" target="_blank">CPTEC/INPE</a>
-			</p>
+			<hr>
+			<ol style="text-align: left;"> <label style="font-size: 18px; font-style: bold; text-decoration: underline;">Passos para consultar a previsão do tempo:</label>
+				<li>Digite o nome da cidade para adiciona-la as opções</li>
+				<li>Clique em Adicionar</li>
+				<li>Selecione a cidade desejada dentre as opções</li>
+				<li>Clique em Pesquisar</li>
+			</ol>
 		</div>
 
 		<!-- BEGIN FORM -->
@@ -30,7 +30,7 @@
 
 				<form action="#" class="find-location">
 					<input type="text" #nomeCidade id="nomeCidade" placeholder="Digite o nome da cidade">
-					<button type="button" onclick="carregaList(nomeCidade)">Adicionar</button>
+					<button type="button" onclick="carregaList(nomeCidade)" style="height: 47px;"> Adicionar </button>
 					</input>
 
 					<br> <br>
