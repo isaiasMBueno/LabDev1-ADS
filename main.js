@@ -6,6 +6,8 @@ function carregaList() {
     alert("Preencha o nome da cidade cidade!");
     return;
   }
+  /*Removendo acentos para a consulta*/
+  nomeCidade = nomeCidade.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
   $.ajax({
     dataType: "xml",
@@ -15,7 +17,15 @@ function carregaList() {
     $(data)
       .find("cidade")
       .each(function () {
-        select.append(new Option($(this).find("nome").text() + "/" + $(this).find("uf").text(), $(this).find("id").text()));
+        var aux = 0;
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value == $(this).find("id").text()) {
+            aux++;
+          }
+        }
+        if (aux == 0) {
+          select.append(new Option($(this).find("nome").text() + "/" + $(this).find("uf").text(), $(this).find("id").text()));
+        }
       });
   });
 }
